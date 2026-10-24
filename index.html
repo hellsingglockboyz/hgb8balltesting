@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>7.0.1: Late Night Confession</title>
+<meta name="theme-color" content="#000000">
+<meta name="description" content="7.0.1: Late Night Confession. Hellsing Glock Boyz.">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=UnifrakturCook:wght@700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="fx fx-grain" aria-hidden="true"></div>
+<div class="fx fx-scan" aria-hidden="true"></div>
+<div class="fx fx-vig" aria-hidden="true"></div>
+
+<div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+  <div class="gate-inner">
+    <div class="advisory">
+      <div class="adv-logo"><img src="assets/hgb-mark.png" alt="HGB"></div>
+      <div class="adv-head">
+        <h2 id="gateTitle">LATE NIGHT CONFESSION</h2>
+        <p><strong>LISTEN FOR YOUR OWN RISK, NOT A JOKE</strong><br>THIS IS AN ADVICE... HGB IS NOT MADE FOR WEAK AND SENSITIVE MINDS</p>
+      </div>
+      <p class="adv-body">THIS PAGE MAY CONTAIN GRAPHIC IMAGES, VIOLENCE, DRUG USE, SEXUAL CONTENT, WEAPONS, BLOOD, GORE, AND OTHER DISTURBING OR MATURE THEMES. IT MAY ALSO FEATURE AMGS, TRUCKS, BENTLEY TRUCKS, AND GT-RS.</p>
+    </div>
+    <button class="enter" id="enter" type="button">Enter</button>
+  </div>
+</div>
+
+<div class="page" id="page">
+  <header class="top">
+    <img src="assets/hgb-mark.png" alt="HGB" width="41" height="46">
+    <p class="timer" id="timer" aria-label="Time until release">--d --h --m --s</p>
+  </header>
+
+  <main>
+    <h1 class="title">7.0.1: Late Night Confession</h1>
+
+    <section class="stage" id="stage" aria-label="Magic 8 ball">
+      <div class="float">
+        <div class="rig" id="rig">
+          <img class="vamp" src="assets/vampire.webp" alt="" width="1100" height="1283" decoding="async">
+          <div class="ball" aria-hidden="true">
+            <div class="gloss"></div>
+            <div class="window">
+              <div class="liquid" id="liquid"></div>
+              <div class="eight"><span>8</span></div>
+              <p class="ans" id="ans"></p>
+              <div class="flash"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="sr" id="srAnswer" role="status" aria-live="polite"></p>
+    </section>
+
+    <form class="ask" id="askForm" autocomplete="off">
+      <label class="sr" for="q">Ask</label>
+      <input id="q" name="q" type="text" maxlength="90" placeholder="confess." enterkeyhint="go">
+      <button class="go" id="go" type="submit">ASK</button>
+    </form>
+
+    <div class="after" id="after" hidden>
+      <button type="button" id="makeCard">STORY CARD</button>
+      <button type="button" id="again">AGAIN</button>
+    </div>
+  </main>
+
+  <footer class="social">
+    <a href="https://open.spotify.com/intl-pt/artist/6eETbW3z9hqi4ZvdNkdsS1" target="_blank" rel="noopener" aria-label="Spotify">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M6.5 9.2c3.6-1 7.6-.7 11 1"/><path d="M7.2 12.6c3-.8 6.2-.5 9 1"/><path d="M8 15.8c2.4-.6 5-.4 7.3.8"/></svg>
+    </a>
+    <a href="https://instagram.com/hellsingglockbboyz" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r=".7" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a href="https://www.youtube.com/@vampiresarereal" target="_blank" rel="noopener" aria-label="YouTube">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4.5"/><path d="M10 9.2l5 2.8-5 2.8z"/></svg>
+    </a>
+  </footer>
+</div>
+
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box">
+    <h2 id="modalTitle" class="sr">Story card</h2>
+    <img id="cardImg" alt="Card with your question and the answer">
+    <div class="modal-actions">
+      <a id="dl" href="#" download="late-night-confession.png">DOWNLOAD</a>
+      <button type="button" id="share" hidden>SHARE</button>
+      <button type="button" id="closeModal">CLOSE</button>
+    </div>
+    <p class="modal-hint">on mobile, hold the image to save.</p>
+  </div>
+</div>
+
+<script src="card-art.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
